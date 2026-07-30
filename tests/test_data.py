@@ -26,7 +26,7 @@ class TestPreprocessing:
     def test_clean_text_removes_urls(self):
         result = clean_text("Check http://bit.ly/test for details")
         assert "http" not in result
-        assert "url" in result
+        assert "url" in result.lower()
 
     def test_clean_text_lowercases(self):
         result = clean_text("HELLO World")

@@ -11,7 +11,7 @@ from analysis import format_results_table, find_best_model
 
 class TestAnalysis:
     def test_format_results(self):
-        results = {"nb": {"accuracy": 0.95, "f1": 0.94}}
+        results = {"nb": {"accuracy": 0.95, "precision": 0.94, "recall": 0.93, "f1": 0.94}}
         table = format_results_table(results)
         assert "nb" in table
         assert "0.95" in table
